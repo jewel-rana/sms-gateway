@@ -11,9 +11,9 @@ class Sms
     public function __construct()
     {
         self::$config = [
-            'api_url' => 'https://api.mobireach.com.bd/SendTextMessage',
-            'api_key' => 'Carifbd5.',
-            'api_user' => 'msonline'
+            'api_url' => '',
+            'api_key' => '',
+            'api_user' => ''
         ];
 
         if( !class_exists('Http') ) {
