@@ -12,4 +12,5 @@ return array(
     'fe62ba7e10580d903cc46d808b5961a4' => $vendorDir . '/tightenco/collect/src/Collect/Support/helpers.php',
     'caf31cc6ec7cf2241cb6f12c226c3846' => $vendorDir . '/tightenco/collect/src/Collect/Support/alias.php',
     '136e53dbd9e10cf4f87df4067d0ef0d2' => $vendorDir . '/laravie/parser/src/helpers.php',
+    '0b3b965f7d645e4c4b6f638bcd5660e8' => $baseDir . '/src/SmsServiceProvider.php',
 );

@@ -16,9 +16,6 @@ class SmsServiceProvider extends ServiceProvider
         $this->app->bind('sms', function () {
             return new Sms();
         });
-        $this->publishes([
-            __DIR__.'/config/sms.php' =>  config_path('sms.php'),
-        ], 'config');
     }
 
     /**
@@ -28,6 +25,8 @@ class SmsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        
+        $this->publishes([
+            __DIR__.'/config/sms.php' =>  config_path('sms.php'),
+        ], 'config');
     }
 }

@@ -13,6 +13,7 @@ class ComposerStaticInit4fe40663ed923377ebdbed2851cffabd
         'fe62ba7e10580d903cc46d808b5961a4' => __DIR__ . '/..' . '/tightenco/collect/src/Collect/Support/helpers.php',
         'caf31cc6ec7cf2241cb6f12c226c3846' => __DIR__ . '/..' . '/tightenco/collect/src/Collect/Support/alias.php',
         '136e53dbd9e10cf4f87df4067d0ef0d2' => __DIR__ . '/..' . '/laravie/parser/src/helpers.php',
+        '0b3b965f7d645e4c4b6f638bcd5660e8' => __DIR__ . '/../..' . '/src/SmsServiceProvider.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -25,6 +26,11 @@ class ComposerStaticInit4fe40663ed923377ebdbed2851cffabd
             'Symfony\\Polyfill\\Php80\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Component\\VarDumper\\' => 28,
+        ),
+        'R' => 
+        array (
+            'Rajtika\\Sms\\Test\\' => 17,
+            'Rajtika\\Sms\\' => 12,
         ),
         'P' => 
         array (
@@ -62,6 +68,14 @@ class ComposerStaticInit4fe40663ed923377ebdbed2851cffabd
         'Symfony\\Component\\VarDumper\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/var-dumper',
+        ),
+        'Rajtika\\Sms\\Test\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/tests',
+        ),
+        'Rajtika\\Sms\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
         'Psr\\SimpleCache\\' => 
         array (

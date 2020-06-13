@@ -38,6 +38,7 @@ class Sms
 
     public static function send()
     {
+        // dd( self::$config );
         $check = self::_check();
         if( $check['status'] === true ) {
             return self::_handShake();
@@ -65,7 +66,7 @@ class Sms
 
     private static function _handShake()
     {
-        if( self::$config['api_url'] && $config['api_key'] && self::$config['api_user'] && self::$params['from'] && self::$params['to'] && self::$params['body'] )
+        if( self::$config['api_url'] && self::$config['api_key'] && self::$config['api_user'] && self::$params['from'] && self::$params['to'] && self::$params['body'] )
         {
             $response = Http::get(
                 self::$config['api_url'], [
