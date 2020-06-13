@@ -17,14 +17,18 @@
     "autoload": {
         "psr-4": {
             "Rajtika\\Sms\\": "src"
-        },
-        "files": [
-            "src/SmsServiceProvider.php"
-        ]
+        }
     },
     "autoload-dev": {
         "psr-4": {
             "Rajtika\\Sms\\Test\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rajtika\\Sms\\SmsServiceProvider"
+            ]
         }
     }
 }

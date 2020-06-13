@@ -12,10 +12,6 @@ class Sms
     {
         self::$config = Config::get('sms');
         self::$params['from'] = self::$config['api_mask'];
-
-        if( !class_exists('Http') ) {
-            die('SMS send require guzzlehttp client');
-        }
     }
 
     public function from( string $mask )
