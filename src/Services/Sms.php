@@ -17,7 +17,7 @@ class Sms
         ];
 
         if( !class_exists('Http') ) {
-            die('SMS send need guzzlehttp client');
+            die('SMS send require guzzlehttp client');
         }
     }
 
