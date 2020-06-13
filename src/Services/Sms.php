@@ -10,11 +10,8 @@ class Sms
     protected static $params;
     public function __construct()
     {
-        self::$config = [
-            'api_url' => '',
-            'api_key' => '',
-            'api_user' => ''
-        ];
+        self::$config = Config::get('sms');
+        self::$params['from'] = self::$config['api_mask'];
 
         if( !class_exists('Http') ) {
             die('SMS send require guzzlehttp client');
