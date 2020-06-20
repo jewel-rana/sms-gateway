@@ -12,15 +12,18 @@ class Sms
     {
         self::$config = Config::get('sms');
         self::$params['from'] = self::$config['api_mask'];
+
     }
 
-    public function from( string $mask )
+    public static function from( string $mask = null )
     {
-        self::$params['from'] = $mask;
+        if( !is_null( $mask ) ) {
+            self::$params['from'] = $mask;
+        }
         return new static;
     }
 
-    public function to( string $number )
+    public static function to( string $number )
     {
         self::$params['to'] = $number;
         return new static;
