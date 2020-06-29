@@ -16,6 +16,7 @@ class Sms
         self::$params['dcs'] = self::$config['api_dcs'];
         self::$params['channel'] = self::$config['api_channel'];
         self::$params['campaign'] = self::$config['api_campaign'];
+        self::$params['flashsms'] = self::$config['api_flash_sms'];
     }
 
     public static function from( string $mask = null )
@@ -78,8 +79,9 @@ class Sms
                 self::$config['keys']['to'] => self::$params['to'],
                 self::$config['keys']['message'] => self::$params['body'],
                 self::$config['keys']['channel'] => self::$params['channel'],
-                self::$config['keys']['dcs'] => self::$params['dcs']
-                self::$config['keys']['campaign'] => self::$params['campaign']
+                self::$config['keys']['dcs'] => self::$params['dcs'],
+                self::$config['keys']['campaign'] => self::$params['campaign'],
+                self::$config['keys']['flashsms'] => self::$params['flashsms']
             ]);
 
             if( self::$config['api_method'] == 'xml') {
