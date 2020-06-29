@@ -12,7 +12,10 @@ class Sms
     {
         self::$config = Config::get('sms');
         self::$params['from'] = self::$config['api_mask'];
-
+        self::$params['channel'] = self::$config['api_mask'];
+        self::$params['dcs'] = self::$config['api_dcs'];
+        self::$params['channel'] = self::$config['api_channel'];
+        self::$params['campaign'] = self::$config['api_campaign'];
     }
 
     public static function from( string $mask = null )
@@ -69,18 +72,25 @@ class Sms
         {
             $response = Http::get(
                 self::$config['api_url'], [
-                'Username' => self::$config['api_user'],
-                'Password' => self::$config['api_key'],
-                'From' => self::$params['from'],
-                'To' => self::$params['to'],
-                'Message' => self::$params['body']
+                self::$config['keys']['user'] => self::$config['api_user'],
+                self::$config['keys']['password'] => self::$config['api_key'],
+                self::$config['keys']['from'] => self::$params['from'],
+                self::$config['keys']['to'] => self::$params['to'],
+                self::$config['keys']['message'] => self::$params['body'],
+                self::$config['keys']['channel'] => self::$params['channel'],
+                self::$config['keys']['dcs'] => self::$params['dcs']
+                self::$config['keys']['campaign'] => self::$params['campaign']
             ]);
-            // Load the XML
-            $xmlResponse = simplexml_load_string($response->body());
 
-            // JSON encode the XML, and then JSON decode to an array.
-            return json_decode(json_encode($xmlResponse));
+            if( self::$config['api_method'] == 'xml') {
+                // Load the XML
+                $xmlResponse = simplexml_load_string($response->body());
 
+                // JSON encode the XML, and then JSON decode to an array.
+                return json_decode(json_encode($xmlResponse));
+            } else {
+                return $response;
+            }
         }
         return false;
     }
