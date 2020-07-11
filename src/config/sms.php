@@ -9,6 +9,7 @@ return [
     'api_dcs' => env("SMS_API_CHANNEL", 0),
     'api_campaign' => env("SMS_API_CAMPAIGN", ''),
     'api_flash_sms' => env("SMS_API_FLASH", 0),
+    'api_message_type' => env("SMS_API_TYPE", 'TEXT'),
     'keys' => [
         'user' => env("SMS_KEYS_USER", 'Username'),
         'password' => env("SMS_KEYS_PASSWORD", 'Password'),
@@ -18,6 +19,7 @@ return [
         'channel' => env("SMS_KEYS_CHANNEL", 'Channel'),
         'campaign' => env("SMS_KEYS_CAMPAIGN", 'Campaign'),
         'dcs' => env("SMS_KEYS_DCS", "DCS"),
-        'flashsms' => env("SMS_KEYS_FLASHMESSAGE", 'flashsms')
+        'flashsms' => env("SMS_KEYS_FLASHMESSAGE", 'flashsms'),
+        'type' => env("SMS_KEYS_TYPE", 'msgType')
     ]
 ];
