@@ -82,7 +82,7 @@ class Sms
                 self::$config['keys']['channel'] => self::$params['channel'],
                 self::$config['keys']['dcs'] => self::$params['dcs'],
                 self::$config['keys']['campaign'] => self::$params['campaign'],
-                self::$config['keys']['flashsms'] => self::$params['flashsms']
+                self::$config['keys']['flashsms'] => self::$params['flashsms'],
                 self::$config['keys']['type'] => self::$params['type']
             ]);
 
